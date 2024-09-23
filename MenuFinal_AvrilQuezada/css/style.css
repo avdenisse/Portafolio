@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #6b8e23;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+section {
+    padding: 100px 20px;
+    margin: 60px 20px; /* da espacio  */
+    background-color: white;
+    border-radius: 5px;
+}
+
+.active {
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+h1{
+    text-align: right;
+}
+ h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+}
+.product-grid img{
+    width: 100px;
+    height: 100px;
+}
+
+.product-card {
+    background-color: #dcdcdc;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #6b8e23;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+#inicio .acercacont{
+    display: flex;
+}
+
+#inicio img {
+    width:492px;
+    height:366px;
+    padding-left: 50px;
+
+}
+#inicio p{
+    font-size:24px ;
+    translate: 630px -300px
+}
+
+#inicio h1{
+    padding-right:300px;
+}
+
+#acerca .cont {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px;
+}
+
+#acerca img {
+    max-width: 40%; 
+    height: auto; 
+}
+
+#acerca p {
+    font-size: 24px;
+    max-width: 60%; 
+    text-align: right; 
+    line-height: 1.6; 
+    overflow-wrap: break-word;
+    translate: 500px -500px;
+
+}
+
+/* pantalla  */
+@media (max-width: 1024px) {
+    /* Navbar */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* margenes */
+    section {
+        margin: 20px;
+        padding: 50px 10px;
+    }
+}
+
+/* telefonos */
+@media (max-width: 768px) {
+    /* vertical */
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Navbar  */
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* imagenes mobiles */
+    #inicio img, #acerca img {
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+    }
+
+    #inicio p, #acerca p {
+        translate: 0; 
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #inicio h1, #acerca h1 {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    /* productos */
+    .product-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /*carrito*/
+    #cartItems {
+        font-size: 14px;
+    }
+
+    /* pie */
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* telefonos */
+@media (max-width: 480px) {
+    /*Texto */
+    h1, h2, p {
+        font-size: 16px;
+    }
+
+    /* productos */
+    .product-card {
+        width: 100%;
+    }
+    
+    /* Navbar  */
+    nav ul {
+        padding: 5px;
+    }
+}
